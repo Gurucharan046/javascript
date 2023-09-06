@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIR ALGERIE</title>
+    <link rel="stylesheet" href="airline.css">
+</head>
+<body>
+    <h1 class="booking-shower">
+            <span>BOOKING FORM </span>
+            <img src="airLogo.png" alt="" srcset="">          
+    </h1>
+    <div class="details-entry-form">
+      
+           <div class="passenger-details">
+                <ul class="passenger-info">
+                   <li>First Name <br>
+                    <input type="text" id="passFname" value="">
+                 </li>   
+                 <li>Last Name <br>
+                    <input type="text" id="passLname" value="">
+                 </li>   
+                 <li>
+                     Age <br>
+                     <input type="number" id="passAge" value="">
+                 </li>
+                </ul>
+           </div>
+             <br/>
+           <div class="board-details">
+            <ul class="board-info">
+               <li>Leaving from (city or airport) <br>
+                <select id="selection1">
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Delhi">Delhi</option>
+                </select>
+             </li>   
+             <li>Going to (city or airport) <br>
+                <select id="selection2">
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Delhi">Delhi</option>
+                </select>
+             </li>   
+             <li>
+                 Class <br>
+                 <select id="selection3">
+                    <option value="first">First</option>
+                    <option value="economy">Economy</option>
+                    <option value="business">Business</option>
+                    <option value="Premium">Premium Economy</option>
+                    </select>
+             </li>
+            </ul>
+           </div>
+           <div class="date-details">
+              <ul id="period-from">
+                <li id="period">Period From: <input type="number" id="pdate"><input type="number" id="pmonth"><input type="number" id="pyear"></li>
+                <li id="to">To:<span id="spacer"></span> <input type="number" id="tdate"><input type="number" id="tmonth"><input type="number" id="tyear"></li>
+                
+              </ul>
+              <li id="btn"><button onclick="getMyFlightDetails()">Go!</button></li>
+
+           </div>
+    </div>
+    <h1 class="booking-shower" style="margin-top: 1%;">
+        <span>PROGRAM OF FLIGHTS </span>   
+    <div id="program-of-flights">
+         
+    </h1>
+    </div>
+   <script src="airline.js"></script> 
+</body>
+</html>

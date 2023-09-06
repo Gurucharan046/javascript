@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Product Entry</h1>
+    <hr/>
+    <div class="product-details">
+          Product ID: <input type="text" value="" id="txtpid"/>
+          Product Name: <input type="text" value="" id="txtpname"/>
+          Product Type: <select id="ddltype">
+            <option value="Select">Select</option>
+            <option value="TV">TV</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Fridge">Fridge</option>
+          </select>
+          Product Price: <input type="number" id="numprice" value=""/>
+          <input type="button" value="Save" onclick="addProduct()">
+          <input type="button" value="Show products" onclick="displayProducts()">
+          <input type="button" value="Reset">
+    </div>
+    <div id="msg">
+           
+    </div>
+    <div id="show-products">
+
+    </div>
+    <h1 id="today-time"></h1>
+    <marquee behavior="" id="today-date" direction="left"></marquee>
+<script src="script.js"></script>
+</body>
+</html>

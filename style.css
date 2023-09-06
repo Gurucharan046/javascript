@@ -1,0 +1,9 @@
+*{
+     font-family: serif;
+     font-weight: 600;
+}
+.nav-items-list{
+     display: inline-block;
+     color:darkolivegreen;
+
+}
