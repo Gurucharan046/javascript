@@ -98,3 +98,6 @@ button{
 {
     margin-left: 4.25rem;
 }
+td{
+    border-collapse: collapse;
+}

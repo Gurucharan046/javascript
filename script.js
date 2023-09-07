@@ -18,7 +18,7 @@ setInterval(function(){
     var time=new Date();
     var element=document.getElementById("today-time");
     element.innerHTML=time.getUTCHours()+":"+time.getUTCMinutes()+":"+time.getUTCSeconds()+":"+time.getUTCMilliseconds();
-},1000)
+},1)
 setTimeout(function(){
     var date=new Date();
     var elem=document.getElementById("today-date");

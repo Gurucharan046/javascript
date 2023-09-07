@@ -2,24 +2,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
-    <h1>Product Entry</h1>
+  <div class="container" style="background-color: aquamarine;">
+    <h1 class="display-1">Product Entry</h1>
     <hr/>
-    <div class="product-details">
-          Product ID: <input type="text" value="" id="txtpid"/>
-          Product Name: <input type="text" value="" id="txtpname"/>
-          Product Type: <select id="ddltype">
-            <option value="Select">Select</option>
-            <option value="TV">TV</option>
-            <option value="Mobile">Mobile</option>
-            <option value="Fridge">Fridge</option>
-          </select>
-          Product Price: <input type="number" id="numprice" value=""/>
+    <div class="form-group">
+       <label for="">Product Name</label>
+       <input type="text" value="" class="form-control" id="txtpname"/>
+       <br>
+       <label for="">Product ID</label>
+       <input type="text" value=""  class="form-control" id="txtpid"/>
+       <br>
+       <label for="">Product Type</label>
+       <select id="ddltype" class="form-control">
+        <option value="Select">Select</option>
+        <option value="TV">TV</option>
+        <option value="Mobile">Mobile</option>
+        <option value="Fridge">Fridge</option>
+      </select>
+      <br>
+      <label for="">Product Price</label>
+      <input type="number" id="numprice" class="form-control" value=""/>
+      <br>
           <input type="button" value="Save" onclick="addProduct()">
-          <input type="button" value="Show products" onclick="displayProducts()">
-          <input type="button" value="Reset">
+          <input type="button" value="Show products" class="btn btn-primary" onclick="displayProducts()">
+          <input type="button" value="Reset" class="btn btn-secondary">
+    </div>
+    <div class="product-details">
+          Product ID: 
+          Product Name: 
+          Product Type: 
+          Product Price: 
     </div>
     <div id="msg">
            
@@ -27,8 +43,10 @@
     <div id="show-products">
 
     </div>
+
     <h1 id="today-time"></h1>
     <marquee behavior="" id="today-date" direction="left"></marquee>
+  </div>
 <script src="script.js"></script>
 </body>
 </html>

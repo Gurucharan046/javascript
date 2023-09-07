@@ -17,7 +17,7 @@ function generateRandomListOfFlights()
     {   var date=generateRandomDate(new Date(1998+Math.floor(Math.random()*24),Math.floor(Math.random()*12),Math.floor(Math.random()*28)+1),new Date());
         var flightData={
             "Date":new Date(months[date.getMonth()]+' '+date.getDate()+', '+date.getFullYear()),
-            "Flight Number":Math.floor(Math.random()*800)+1000,
+            "Flight Number":1000+Math.floor(Math.random()*800),
             "From":places[Math.floor(Math.random()*places.length)],
             "To":places[Math.floor(Math.random()*places.length)],
             "Hour of Departure":HourOfDept,
@@ -56,16 +56,16 @@ function getMyFlightDetails()
       var from=new Date(periodFromYear+'-'+periodFromMonth+'-'+periodFromDate)
       console.log(to);
       console.log(from);
-      var tableHeader="<table style='border:1px solid black;'><thead><tr><th>DATE</th><th>FLIGHT NUMBER</th><th>FROM</th><th>TO</th><th>HOUR OF DEPARTURE</th><th>HOUR OF ARRIVAL</th><th>PLANE</th></tr></thead>";
+      var tableHeader="<table style='border:1px solid black;background: #ffb3b3;'><thead style='border:1px solid black;'><tr style='border:1px solid black;'><th style='border:1px solid black;'>DATE</th><th style='border:1px solid black;'>FLIGHT NUMBER</th><th style='border:1px solid black;'>FROM</th><th style='border:1px solid black;'>TO</th><th style='border:1px solid black;'>HOUR OF DEPARTURE</th><th>HOUR OF ARRIVAL</th><th style='border:1px solid black;'>PLANE</th></tr></thead>";
      var tableBody="";
      for(let i=0;i<listOfFlights.length;i++)
      {
         
-        if(leavingFrom===listOfFlights[i]["From"] && goingTo===listOfFlights[i]["To"]
-        && new Date(listOfFlights[i]["Date"])>=to && new Date(listOfFlights[i]["Date"]<=from))
+        if(leavingFrom===listOfFlights[i]["From"] && goingTo===listOfFlights[i]["To"] && new Date(listOfFlights[i]["Date"])>=from
+        && new Date(listOfFlights[i]["Date"])<=to )
         {
-         tableBody=tableBody+"<tr><td>"+listOfFlights[i]["Date"]+"</td><td>"+listOfFlights[i]["Flight Number"]+"</td><td>"
-         +"</td><td>"+listOfFlights[i]["From"]+"</td><td>"+listOfFlights[i]["To"]+"</td><td>"+listOfFlights[i]["Hour of Departure"]+"</td><td>"+listOfFlights[i]["Hour of Arrival"]+"</td><td>"+listOfFlights[i]["Plane"]+"</td>"+"</tr>"
+         tableBody=tableBody+"<tr style='border:1px solid black;'><td style='border:1px solid black;'>"+listOfFlights[i]["Date"].getDate()+"/"+listOfFlights[i]["Date"].getMonth()+"/"+listOfFlights[i]["Date"].getFullYear()+"</td><td style='border:1px solid black;>"+listOfFlights[i]["Flight Number"]+"</td><td style='border:1px solid black;'>"
+         +"</td><td style='border:1px solid black;'>"+listOfFlights[i]["From"]+"</td><td style='border:1px solid black;'>"+listOfFlights[i]["To"]+"</td><td style='border:1px solid black;'>"+listOfFlights[i]["Hour of Departure"]+"</td><td style='border:1px solid black;'>"+listOfFlights[i]["Hour of Arrival"]+"</td><td style='border:1px solid black;'>"+listOfFlights[i]["Plane"]+"</td>"+"</tr>"
      }
     }
      var tableFooter="</table>"
